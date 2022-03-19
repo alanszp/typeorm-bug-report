@@ -1,6 +1,6 @@
-import { ConnectionOptions } from "typeorm";
+import { DataSourceOptions } from "typeorm";
 
-const ormconfig: ConnectionOptions = {
+const ormconfig: DataSourceOptions = {
   name: "default",
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-explicit-any
   type: "sqlite",

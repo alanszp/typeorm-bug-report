@@ -38,10 +38,10 @@ async function main() {
 
   await createSeedData();
 
-  const list = await List.findOne(
-    { name: "Priority list" },
-    { relations: ["orderedItems", "orderedItems.item"] }
-  );
+  const list = await List.findOne({
+    where: { name: "Priority list" },
+    relations: ["orderedItems", "orderedItems.item"],
+  });
 
   if (!list) throw Error("No list in DB. Run yarn install again.");
 
